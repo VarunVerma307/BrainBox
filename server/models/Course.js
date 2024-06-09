@@ -82,10 +82,10 @@ const coursesSchema = new mongoose.Schema({
   thumbnail: {
     type: String,
   },
-  tag: {
-    type: [String],
-    required: true,
-  },
+  // tag: {
+  //   type: [String],
+  //   required: true,
+  // },
   category: {
     type: mongoose.Schema.Types.ObjectId,
     // required: true,
@@ -98,9 +98,9 @@ const coursesSchema = new mongoose.Schema({
       ref: "user",
     },
   ],
-  instructions: {
-    type: [String],
-  },
+  // instructions: {
+  //   type: [String],
+  // },
   status: {
     type: String,
     enum: ["Draft", "Published"],
