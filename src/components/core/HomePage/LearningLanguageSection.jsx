@@ -16,7 +16,7 @@ const LearningLanguageSection = () => {
               languages realistic voice-over, progress tracking, custom schedule
               and more.
             </div>
-            <div className="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-0">
+            <div className="flex flex-col lg:flex-row items-center justify-center my-8  py-5 lg:mt-0">
               <img
                 src={Know_your_progress}
                 alt=""

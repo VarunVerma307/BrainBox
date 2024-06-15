@@ -19,7 +19,7 @@ export const Home = () => {
     <div>
       {/* section1 */}
       <div className="flex flex-col items-center   w-[100%] justify-center">
-        <div className="lg:flex flex-row items-center justify-center p-10 m-10 min-h-screen">
+        <div className="lg:flex flex-row items-center justify-center p-10 m-5 min-h-screen">
           <div className="my-15  w-[50%] h-[100%] ">
             <div className=" text-5xl font-semibold text-white">
               Empower Your Future with <HighlightText text={"Coding Skills"} />
@@ -49,9 +49,9 @@ export const Home = () => {
         </div>
 
         {/* Video */}
-        <div className=" my-10 mx-auto shadow-[10px_-5px_50px_-5px] w-[70%] shadow-blue-200">
+        <div className=" my-5 mx-auto w-[65%]">
           <video
-            className="shadow-[20px_20px_rgba(255,255,255)] w-[100%]"
+            className=" w-[100%] shadow-[2px_2px_30px_2px]  shadow-black"
             muted
             loop
             autoPlay
@@ -173,7 +173,7 @@ export const Home = () => {
         <h1 className="text-center text-4xl font-semibold mt-8">
           Reviews from other learners
         </h1>
-        <ReviewSlider />
+        <ReviewSlider/>
       </div>
 
       {/* Footer */}
