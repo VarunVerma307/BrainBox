@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 
-import CountryCode from "../../../data/countrycode.json"
-import { apiConnector } from "../../../services/apiconnector"
-import { contactusEndpoint } from "../../../services/apis"
+import CountryCode from "../../data/countrycode.json"
+import { apiConnector } from "../../services/apiconnector"
+import { contactusEndpoint } from "../../services/apis"
 
 const ContactUsForm = () => {
   const [loading, setLoading] = useState(false)
@@ -173,7 +173,7 @@ const ContactUsForm = () => {
       <button
         disabled={loading}
         type="submit"
-        className={`rounded-md w-7/12 mx-auto bg-yellow-50 px-6 py-3 text-center text-[13px] font-bold text-black shadow-[2px_2px_0px_0px_rgba(255,255,255,0.18)] 
+        className={`rounded-md bg-yellow-50 px-6 py-3 text-center text-[13px] font-bold text-black shadow-[2px_2px_0px_0px_rgba(255,255,255,0.18)] 
          ${
            !loading &&
            "transition-all duration-200 hover:scale-95 hover:shadow-none"

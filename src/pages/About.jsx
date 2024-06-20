@@ -77,12 +77,12 @@ const About = () => {
               /> */}
             </div>
           </div>
-          <div className="flex flex-col items-center lg:gap-10 lg:flex-row justify-between">
-            <div className="my-24 flex lg:w-[40%] flex-col gap-10">
-              <h1 className="bg-gradient-to-b from-[#FF512F] to-[#F09819] bg-clip-text text-4xl font-semibold text-transparent lg:w-[70%] ">
+          <div className="flex flex-col items-center lg:gap-10 lg:flex-row justify-around">
+            <div className="my-24 flex lg:w-[40%] flex-col gap-10 ">
+              <h1 className="text-white bg-clip-text text-4xl font-semibold  lg:w-[70%] ">
                 Our Vision
               </h1>
-              <p className="text-base font-medium text-white lg:w-[95%]">
+              <p className="text-justify font-medium text-white lg:w-[95%]">
                 With this vision in mind, we set out on a journey to create an
                 e-learning platform that would revolutionize the way people
                 learn. Our team of dedicated experts worked tirelessly to
@@ -95,7 +95,7 @@ const About = () => {
               <h1 className="bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text text-4xl font-semibold lg:w-[70%] ">
               Our Mission
               </h1>
-              <p className="text-base font-medium text-white lg:w-[95%]">
+              <p className="text-justify font-medium text-white lg:w-[95%]">
               Our mission goes beyond just delivering courses online. We wanted to create a vibrant community of learners, where individuals can connect, collaborate, and learn from one another. We believe that knowledge thrives in an environment of sharing and dialogue, and we foster this spirit of collaboration through forums, live sessions, and networking opportunities.
               </p>
             </div>

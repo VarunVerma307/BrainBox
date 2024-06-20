@@ -10,6 +10,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import About from "./pages/About";
 import { useEffect, useState } from "react";
+import Contact from "./pages/Contact";
+import ForgotPassword from "./pages/ForgotPassword";
+import VerifyEmail from "./pages/VerifyEmail";
+import Catalog from "./pages/Catalog";
 
 function App() {
   // const defaultOptions={
@@ -39,6 +43,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="catalog/:catalogName" element={<Catalog/>} />
         <Route
           path="signup"
           element={
@@ -55,7 +60,25 @@ function App() {
             </OpenRoute>
           }
         />
+         <Route
+          path="forgot-password"
+          element={
+            <OpenRoute>
+              <ForgotPassword />
+            </OpenRoute>
+          }
+        />  
+         <Route
+          path="verify-email"
+          element={
+            <OpenRoute>
+              <VerifyEmail />
+            </OpenRoute>
+          }
+        />  
         <Route path="/about" element={<About />} />
+
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
