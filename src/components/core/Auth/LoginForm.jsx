@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 
 import { login } from "../../../services/operations/authAPI"
+import { setProgress } from "../../../slices/loadingBarSlice"
 
 function LoginForm() {
   const navigate = useNavigate()
@@ -83,7 +84,7 @@ function LoginForm() {
           </p>
         </Link>
       </label>
-      <button
+      <button onClick={()=>{dispatch(setProgress(60))}}
         type="submit"
         className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
       >

@@ -1,4 +1,4 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
 
 // Define the RatingAndReview schema
 const ratingAndReviewSchema = new mongoose.Schema({

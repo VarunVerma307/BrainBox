@@ -1,5 +1,5 @@
 import React from 'react'
-import CTAButton from "../../../components/core/HomePage/Button";
+import CTAButton from '../HomePage/Button'
 import { FaArrowRight } from "react-icons/fa";
 import Instructor from "../../../assets/images/Instructor.jpg";
 import HighlightText from './HighlightText';

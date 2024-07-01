@@ -1,19 +1,19 @@
 import bc from "../assets/images/background.png";
 import banner from "../assets/images/banner.mp4";
 import homepng from "../assets/images/home.png";
-import CTAButton from "../components/core/HomePage/Button";
-import CodeBlocks from "../components/core/HomePage/CodeBlocks";
-import HighlightText from "../components/core/HomePage/HighlightText";
+import CTAButton from "../Components/core/HomePage/Button";
+import CodeBlocks from "../Components/core/HomePage/CodeBlocks";
+import HighlightText from "../Components/core/HomePage/HighlightText";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../App.css";
-import ExploreMore from "../components/core/HomePage/ExploreMore";
-import TimelineSection from "../components/core/HomePage/TimeLineSection";
-import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
-import InstructorSection from "../components/core/HomePage/InstructorSection";
-import Footer from "../components/common/Footer";
-import ReviewSlider from "../components/common/ReviewSlider";
+import ExploreMore from "../Components/core/HomePage/ExploreMore";
+import TimelineSection from "../Components/core/HomePage/TimeLineSection";
+import LearningLanguageSection from "../Components/core/HomePage/LearningLanguageSection";
+import InstructorSection from "../Components/core/HomePage/InstructorSection";
+// import Footer from "../Components/common/Footer";
+// import ReviewSlider from "../components/common/ReviewSlider";
 export const Home = () => {
   return (
     <div>
@@ -173,11 +173,11 @@ export const Home = () => {
         <h1 className="text-center text-4xl font-semibold mt-8">
           Reviews from other learners
         </h1>
-        <ReviewSlider/>
+        {/* <ReviewSlider/> */}
       </div>
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
