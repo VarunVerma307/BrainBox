@@ -35,14 +35,25 @@ import PurchaseHistory from "./Components/core/Dashboard/PurchaseHistory";
 import InstructorDashboard from "./Components/core/Dashboard/InstructorDashboard/InstructorDashboard";
 import { RiWifiOffLine } from "react-icons/ri";
 import AdminPannel from "./Components/core/Dashboard/AdminPannel";
+import { useState ,useEffect} from "react";
+import { Loader } from "./pages/Loader";
 
 function App() {
   console.log = function () {};
   const user = useSelector((state) => state.profile.user);
   const progress = useSelector((state) => state.loadingBar);
   const dispatch = useDispatch();
+  const [loading,setLoding]=useState(true);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoding(false);
+    },3000);
+  },[]);
+  if(loading){
+    return <Loader/>
+  }
   return (
-    <div className=" w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
+    <div className=" w-screen min-h-screen bg-richblack-800 flex flex-col font-inter">
       <LoadingBar
         color="#FFD60A"
         height={1.4}

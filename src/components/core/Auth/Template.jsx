@@ -1,7 +1,7 @@
 import { FcGoogle } from "react-icons/fc"
 import { useSelector } from "react-redux"
 
-// import frameImg from "../../../assets/Images/frame.png"
+import frameImg from "../../../assets/images/background.png"
 import LoginForm from "./LoginForm"
 import SignupForm from "./SignupForm"
 
@@ -13,7 +13,7 @@ function Template({ title, description1, description2, image, formType }) {
       {loading ? (
         <div className="spinner"></div>
       ) : (
-        <div className="mx-auto flex w-11/12 max-w-maxContent flex-col-reverse justify-between gap-y-12 py-12 md:flex-row md:gap-y-0 md:gap-x-12">
+        <div className="mx-auto flex w-[100%] max-w-maxContent flex-col-reverse justify-around gap-y-12 py-12 md:flex-row md:gap-y-0 md:gap-x-12">
           <div className="mx-auto w-11/12 max-w-[450px] md:mx-0">
             <h1 className="text-[1.875rem] font-semibold leading-[2.375rem] text-richblack-5">
               {title}
@@ -26,14 +26,8 @@ function Template({ title, description1, description2, image, formType }) {
             </p>
             {formType === "signup" ? <SignupForm /> : <LoginForm />}
           </div>
-          {/* <div className="relative mx-auto w-11/12 max-w-[450px] md:mx-0">
-            <img
-              src={frameImg}
-              alt="Pattern"
-              width={558}
-              height={504}
-              loading="lazy"
-            />
+          <div className="relative mx-auto w-11/12 max-w-[450px] md:mx-0">
+            <img src={frameImg}/>
             <img
               src={image}
               alt="Students"
@@ -42,7 +36,7 @@ function Template({ title, description1, description2, image, formType }) {
               loading="lazy"
               className="absolute -top-4 right-4 z-10"
             />
-          </div> */}
+          </div>
         </div>
       )}
     </div>

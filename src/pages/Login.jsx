@@ -1,4 +1,4 @@
-// import loginImg from "../assets/Images/login.webp"
+import loginImg from "../assets/images/login.png"
 import Template from "../Components/core/Auth/Template"
 import { login } from "../services/operations/authAPI"
 import { useDispatch } from "react-redux"
@@ -50,7 +50,7 @@ function Login() {
       title="Welcome Back"
       description1="Build skills for today, tomorrow, and beyond."
       description2="Education to future-proof your career."
-      // image={loginImg}
+      image={loginImg}
       formType="login"
     />
     </>

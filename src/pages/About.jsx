@@ -1,15 +1,15 @@
 import React from 'react'
 import HighlightText from '../Components/core/HomePage/HighlightText';
-// import BannerImage1 from "../assets/Images/aboutus1.webp"
-// import BannerImage2 from "../assets/Images/aboutus2.webp"
-// import BannerImage3 from "../assets/Images/aboutus3.webp"
+import BannerImage1 from "../assets/images/student1.jpg"
+import BannerImage2 from "../assets/images/student3.avif"
+import BannerImage3 from "../assets/images/student2.jpg"
 import Quote from "../Components/core/AboutPage/Quote"
-// import FoundingStory from "../assets/Images/FoundingStory.png"
+import FoundingStory from "../assets/images/student4.jpg"
 import StatsComponent from '../Components/core/AboutPage/Stats'
 import LearningGrid from '../Components/core/AboutPage/LearningGrid'
 import ContactFormSection from '../Components/core/AboutPage/ContactFormSection'
 import Footer from '../Components/common/Footer'
-// import RatingSlider from '../Components/core/Ratings/RatingSlider';
+import RatingSlider from '../Components/core/Ratings/RatingSlider';
 
 const About = () => {
   return (
@@ -24,9 +24,9 @@ const About = () => {
             </header>
             <div className='sm:h-[70px] lg:h-[150px]'></div>
             <div className='absolute bottom-0 left-[50%] grid w-[100%] translate-x-[-50%] translate-y-[30%] grid-cols-3 gap-3 lg:gap-5'>
-                {/* <img src={BannerImage1} />
+                <img src={BannerImage1} />
                 <img src={BannerImage2} />
-                <img src={BannerImage3} /> */}
+                <img src={BannerImage3} />
             </div>
         </div>
       </section>
@@ -57,7 +57,7 @@ const About = () => {
                 </div>
                 {/* foudning story right box */}
                 <div>
-                    {/* <img className='shadow-[0_0_20px_0] shadow-[#FC6767]'  src={FoundingStory} /> */}
+                    <img className='shadow-[0_0_20px_0] shadow-[#FC6767]'  src={FoundingStory} />
                 </div>
             </div>
 
@@ -92,7 +92,7 @@ const About = () => {
       <section>
       <div className=' mb-16 mt-3 w-screen'>
         <h2 className='text-center text-4xl font-semibold mt-8 text-richblack-5 mb-5'>Reviews from other learners</h2>
-        {/* <RatingSlider /> */}
+        <RatingSlider />
       </div>
       </section>
 

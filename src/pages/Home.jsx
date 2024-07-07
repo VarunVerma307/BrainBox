@@ -12,9 +12,32 @@ import ExploreMore from "../Components/core/HomePage/ExploreMore";
 import TimelineSection from "../Components/core/HomePage/TimeLineSection";
 import LearningLanguageSection from "../Components/core/HomePage/LearningLanguageSection";
 import InstructorSection from "../Components/core/HomePage/InstructorSection";
-// import Footer from "../Components/common/Footer";
-// import ReviewSlider from "../components/common/ReviewSlider";
+import { useDispatch } from 'react-redux';
+// import { setProgress } from "../slices/loadingBarSlice"
+import { getCatalogaPageData } from '../services/operations/pageAndComponentData';
+import CourseSlider from '../Components/core/Catalog/CourseSlider';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import RatingSlider from '../Components/core/Ratings/RatingSlider';
+
 export const Home = () => {
+  const [CatalogPageData, setCatalogPageData] = useState(null);
+  const categoryID = "6682d9a074d17a666669863a";
+
+  useEffect(() => {
+      const fetchCatalogPageData = async () => {
+          
+              const result = await getCatalogaPageData(categoryID,dispatch);
+              setCatalogPageData(result);
+              // console.log("page data",CatalogPageData);
+          
+      }
+      if (categoryID) {
+          fetchCatalogPageData();
+      }
+  }, [categoryID])
+  const dispatch = useDispatch();
+
   return (
     <div>
       {/* section1 */}
@@ -89,6 +112,22 @@ export const Home = () => {
             backgroundGradient={<div className="codeblock1 absolute "></div>}
           />
         </div>
+
+
+        <div className=' mx-auto box-content w-full max-w-maxContentTab px- py-12 lg:max-w-maxContent'>
+        <h2 className='section_heading mb-6 md:text-3xl text-xl'>
+           Most Popular Courses
+        </h2>
+        <CourseSlider Courses={CatalogPageData?.selectedCourses}/>
+      </div>       
+        <div className=' mx-auto box-content w-full max-w-maxContentTab px- py-12 lg:max-w-maxContent'>
+        <h2 className='section_heading mb-6 md:text-3xl text-xl'>
+           Students are learning
+        </h2>
+        <CourseSlider Courses={CatalogPageData?.differentCourses}/>
+      </div>  
+
+
         <div>
           <CodeBlocks
             position={"lg:flex-row-reverse"}
@@ -168,16 +207,11 @@ export const Home = () => {
       <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         {/* Become a instructor section */}
         <InstructorSection />
-
-        {/* Reviws from Other Learner */}
-        <h1 className="text-center text-4xl font-semibold mt-8">
-          Reviews from other learners
-        </h1>
-        {/* <ReviewSlider/> */}
       </div>
-
-      {/* Footer */}
-      {/* <Footer /> */}
+      <div className=' mb-16 mt-3'>
+        <h2 className='text-center text-2xl md:text-4xl font-semibold mt-8 text-richblack-5 mb-5'>Reviews from other learners</h2>
+        <RatingSlider />
+      </div>
     </div>
   );
 };
