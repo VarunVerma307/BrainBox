@@ -43,7 +43,7 @@ export const Home = () => {
       {/* section1 */}
       <div className="flex flex-col items-center   w-[100%] justify-center">
         <div className="lg:flex flex-row items-center justify-center p-10 m-5 min-h-screen">
-          <div className="my-15  w-[50%] h-[100%] ">
+          <div className="my-15 lg:w-full w-full h-[100%] md:w-auto ">
             <div className=" text-5xl font-semibold text-white">
               Empower Your Future with <HighlightText text={"Coding Skills"} />
             </div>
@@ -62,7 +62,7 @@ export const Home = () => {
               </div>
             </Link>
           </div>
-          <div className="relative w-[50%] overflow-hidden ">
+          <div className="relative w-full overflow-hidden lg:w-full  md:w-auto ">
             <img src={bc} className="w-[100%]  object-cover h-[100%]" />
             <img
               src={homepng}
