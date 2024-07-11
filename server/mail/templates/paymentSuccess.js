@@ -67,8 +67,8 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
       
       <body>
           <div class="container">
-              <a href=""><img class="logo" src="https://ibb.co/vHmdG30"
-                      alt="BrainBox Logo"></a>
+            <img class="logo" src="https://ibb.co/vHmdG30"
+                      alt="BrainBox Logo">
               <div class="message">Course Payment Confirmation</div>
               <div class="body">
                   <p>Dear ${name},</p>
