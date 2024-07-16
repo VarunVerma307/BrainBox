@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactUsForm from '../Components/contactUs/ContactUsForm'
+import ContactUsForm from '../components/contactUs/ContactUsForm'
 import image from '../assets/images/contact.png'
 const ContactUs = () => {
   return (

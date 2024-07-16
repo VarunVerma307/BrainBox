@@ -1,5 +1,5 @@
 import signupImg from "../assets/images/signup (3).png"
-import Template from "../Components/core/Auth/Template"
+import Template from "../components/core/Auth/Template"
 import { useSelector } from "react-redux";
 
 function Signup() {

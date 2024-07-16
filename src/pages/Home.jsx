@@ -1,24 +1,24 @@
 import bc from "../assets/images/background.png";
 import banner from "../assets/images/banner.mp4";
 import homepng from "../assets/images/home.png";
-import CTAButton from "../Components/core/HomePage/Button";
-import CodeBlocks from "../Components/core/HomePage/CodeBlocks";
-import HighlightText from "../Components/core/HomePage/HighlightText";
+import CTAButton from "../components/core/HomePage/Button";
+import CodeBlocks from "../components/core/HomePage/CodeBlocks";
+import HighlightText from "../components/core/HomePage/HighlightText";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../App.css";
-import ExploreMore from "../Components/core/HomePage/ExploreMore";
-import TimelineSection from "../Components/core/HomePage/TimeLineSection";
-import LearningLanguageSection from "../Components/core/HomePage/LearningLanguageSection";
-import InstructorSection from "../Components/core/HomePage/InstructorSection";
+import ExploreMore from "../components/core/HomePage/ExploreMore";
+import TimelineSection from "../components/core/HomePage/TimeLineSection";
+import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection";
+import InstructorSection from "../components/core/HomePage/InstructorSection";
 import { useDispatch } from 'react-redux';
 // import { setProgress } from "../slices/loadingBarSlice"
 import { getCatalogaPageData } from '../services/operations/pageAndComponentData';
-import CourseSlider from '../Components/core/Catalog/CourseSlider';
+import CourseSlider from '../components/core/Catalog/CourseSlider';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import RatingSlider from '../Components/core/Ratings/RatingSlider';
+import RatingSlider from '../components/core/Ratings/RatingSlider';
 
 export const Home = () => {
   const [CatalogPageData, setCatalogPageData] = useState(null);
