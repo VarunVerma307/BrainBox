@@ -107,7 +107,7 @@ const NavBar = ({ setProgress }) => {
                                 </div>
                                 {
                                     totalItems > 0 && (
-                                        <span className=' font-medium text-[12px] shadow-[3px ] shadow-black bg-yellow-100 text-richblack-900 rounded-full px-[4px] absolute -top-[2px] right-[1px]'>
+                                        <span className=' font-medium text-[12px] shadow-[3px ] shadow-black bg-yellow-50 text-richblack-900 rounded-full px-[4px] absolute -top-[2px] right-[1px]'>
                                             {totalItems}
                                         </span>
                                     )
