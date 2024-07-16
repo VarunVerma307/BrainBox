@@ -1,4 +1,4 @@
-import Footer from "../components/common/Footer";
+import Footer from "../components/common/FooTer";
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection";
 import LearningGrid from "../components/core/AboutPage/LearningGrid";
 import Quote from "../components/core/AboutPage/Quote";
