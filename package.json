@@ -50,10 +50,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "dotenvx run -- react-scripts start",
-    "build": "dotenvx run -- react-scripts build",
-    "test": "dotenvx run -- react-scripts test",
-    "eject": "dotenvx run -- react-scripts eject",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "server": "cd server && npm run dev",
     "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
   },
