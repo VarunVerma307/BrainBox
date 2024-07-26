@@ -44,6 +44,7 @@ function App() {
   const progress = useSelector((state) => state.loadingBar);
   const dispatch = useDispatch();
   const [loading,setLoding]=useState(true);
+  console.log(process.env);
   useEffect(()=>{
     setTimeout(()=>{
       setLoding(false);

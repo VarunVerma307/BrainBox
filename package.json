@@ -1,10 +1,10 @@
 {
   "name": "BrainBox-client",
   "description": "This is the client side of the Brain-Box App",
- 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.6.4",
     "@ramonak/react-progress-bar": "^5.0.3",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.16.5",
@@ -17,6 +17,7 @@
     "cookie-parser": "^1.4.6",
     "copy-to-clipboard": "^3.3.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express-fileupload": "^1.5.0",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.1",
@@ -49,10 +50,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "dotenvx run -- react-scripts start",
+    "build": "dotenvx run -- react-scripts build",
+    "test": "dotenvx run -- react-scripts test",
+    "eject": "dotenvx run -- react-scripts eject",
     "server": "cd server && npm run dev",
     "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
   },
