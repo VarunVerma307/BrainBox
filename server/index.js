@@ -25,7 +25,8 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: JSON.parse(process.env.CORS_ORIGIN),
+    origin: process.env.CORS_ORIGIN,
+    methods: ['GET', 'PUT', 'POST', 'DELETE'],
     credentials: true,
     maxAge: 14400,
   })
@@ -44,7 +45,7 @@ app.use(fileUpload({
   limits: { fileSize: 10 * 1024 * 1024 } // Limit the size to 10MB, for example
 }));
 cloudnairyconnect();
-
+app.options('*', cors());
 app.use("/api/v1/auth", userRoutes);
 
 app.use("/api/v1/payment", paymentRoutes);
